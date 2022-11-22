@@ -59,13 +59,55 @@ import java.lang.Math;
  *
  * </div>
  * 
- * @author Zachary Sousa, with contributions from: Eli Wood, Dave Slemon, Nathan Braniff
- * @version 1.13
+ * @author Zachary Sousa, with contributions and additions from: Eli Wood, Dave Slemon, Nathan Braniff
+ * @version 1.14
  * 
  * 
  */
 public class Tools
 {
+        //V GENERIC CONSOLE STUFF V
+    /**
+     * pl
+     * 
+     * <ul>
+     *  <li>Smaller version of System.out.println</li>
+     * </ul>
+     * 
+     * @param  s        string to print 
+     *
+     * @author Zachary Sousa
+     * @version 1.00
+     * 
+     * 
+     */
+    public static void pl(String s) {
+        System.out.println(s);
+    }
+    
+    
+    
+    /**
+     * pl
+     * 
+     * <ul>
+     *  <li>Smaller version of System.out.print</li>
+     * </ul>
+     * 
+     * 
+     * @param  s        string to print 
+     *
+     * @author Zachary Sousa
+     * @version 1.00
+     * 
+     * 
+     */
+    public static void p(String s) {
+        System.out.print(s);
+    }
+    
+    
+    
     
         //V GENERIC STRING STUFF V
     /**
