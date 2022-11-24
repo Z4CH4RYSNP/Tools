@@ -1,4 +1,5 @@
 import java.lang.Math;
+import java.util.Scanner;
 
 /**
  * <style>
@@ -60,13 +61,50 @@ import java.lang.Math;
  * </div>
  * 
  * @author Zachary Sousa, with contributions and additions from: Eli Wood, Dave Slemon, Nathan Braniff
- * @version 1.14
+ * @version 1.15
  * 
  * 
  */
 public class Tools
 {
         //V GENERIC CONSOLE STUFF V
+
+
+
+    /**
+     * numIn
+     * 
+     * <ul>
+     *  <li>Safe way of inputting numbers through the console using Scanner</li>
+     * </ul>
+     * 
+     * @return      parsed integer after verifying that it is allowed
+     *
+     * @author Zachary Sousa
+     * @version 1.00
+     * 
+     * 
+     */
+    public static int numIn() {
+        Scanner in = new Scanner(System.in);
+        String temp = "";
+        while(true) {
+            temp = in.nextLine();
+            if(temp.isEmpty()) {
+                pl("ERROR: Please type in a number.");
+            }   else if(temp.matches(".*[a-zA-Z].*")) {                                                         
+                pl("ERROR: Program does not accept letters. Try again.");
+            }   else if(temp.matches(".*[\\p{Punct}].*")) {                         
+                pl("ERROR: Program does not accept special characters. Try again.");
+            }   else {
+                in.close();
+                return Integer.parseInt(temp);
+            }
+        }
+    }
+
+
+
     /**
      * pl
      * 
